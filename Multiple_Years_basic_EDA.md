@@ -22,7 +22,7 @@ date()
 ```
 
 ```
-## [1] "Thu Sep 21 20:05:59 2017"
+## [1] "Wed Oct 18 15:51:53 2017"
 ```
 
 ```r
@@ -30,19 +30,27 @@ sessionInfo()
 ```
 
 ```
-## R version 3.3.1 (2016-06-21)
-## Platform: x86_64-apple-darwin13.4.0 (64-bit)
-## Running under: OS X 10.12.6 (Sierra)
+## R version 3.4.0 (2017-04-21)
+## Platform: x86_64-pc-linux-gnu (64-bit)
+## Running under: Red Hat Enterprise Linux Server 7.2 (Maipo)
+## 
+## Matrix products: default
+## BLAS/LAPACK: /shared/ucl/apps/openblas/0.2.14/gnu-4.9.2/lib/libopenblasp-r0.2.14.so
 ## 
 ## locale:
-## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+##  [1] LC_CTYPE=en_GB.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_GB.UTF-8        LC_COLLATE=en_GB.UTF-8    
+##  [5] LC_MONETARY=en_GB.UTF-8    LC_MESSAGES=en_GB.UTF-8   
+##  [7] LC_PAPER=en_GB.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_GB.UTF-8 LC_IDENTIFICATION=C       
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-## [1] magrittr_1.5  tools_3.3.1   stringi_1.1.5 knitr_1.16    stringr_1.2.0
-## [6] evaluate_0.10
+## [1] compiler_3.4.0 magrittr_1.5   tools_3.4.0    stringi_1.1.5 
+## [5] knitr_1.16     stringr_1.2.0  evaluate_0.10
 ```
 
 ```r
@@ -81,12 +89,20 @@ sessionInfo()
 ```
 
 ```
-## R version 3.3.1 (2016-06-21)
-## Platform: x86_64-apple-darwin13.4.0 (64-bit)
-## Running under: OS X 10.12.6 (Sierra)
+## R version 3.4.0 (2017-04-21)
+## Platform: x86_64-pc-linux-gnu (64-bit)
+## Running under: Red Hat Enterprise Linux Server 7.2 (Maipo)
+## 
+## Matrix products: default
+## BLAS/LAPACK: /shared/ucl/apps/openblas/0.2.14/gnu-4.9.2/lib/libopenblasp-r0.2.14.so
 ## 
 ## locale:
-## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+##  [1] LC_CTYPE=en_GB.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_GB.UTF-8        LC_COLLATE=en_GB.UTF-8    
+##  [5] LC_MONETARY=en_GB.UTF-8    LC_MESSAGES=en_GB.UTF-8   
+##  [7] LC_PAPER=en_GB.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_GB.UTF-8 LC_IDENTIFICATION=C       
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
@@ -95,8 +111,8 @@ sessionInfo()
 ## [1] foreign_0.8-67
 ## 
 ## loaded via a namespace (and not attached):
-## [1] magrittr_1.5  tools_3.3.1   stringi_1.1.5 knitr_1.16    stringr_1.2.0
-## [6] evaluate_0.10
+## [1] compiler_3.4.0 magrittr_1.5   tools_3.4.0    stringi_1.1.5 
+## [5] knitr_1.16     stringr_1.2.0  evaluate_0.10
 ```
 
 
