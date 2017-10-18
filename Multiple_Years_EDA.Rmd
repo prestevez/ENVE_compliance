@@ -1,0 +1,177 @@
+---
+title: "Extortion in Mexico: EDA of several sweeps of the ENVE"
+author: "Patricio R. Estevez Soto"
+email: "patricio.estevez.14@ucl.ac.uk"
+date: "14/09/2017"
+output:
+  md_document:
+    variant: "markdown"
+pandoc_args: "--smart"
+---
+
+# Set up, data input and pre-process
+
+## Session info
+
+We first check details of the session and system, and for reproducibility, we set the random seed.
+
+```{r session, cache=FALSE}
+starttime <- proc.time()
+date()
+sessionInfo()
+set.seed(42)
+options(scipen=0)
+```
+
+## Load packages and functions
+
+Install custom package, requires `devtools`.
+
+```{r install-victim}
+# devtools::install_github("prestevez/victim")
+```
+
+Next we load the packages that we will use.
+
+```{r packages}
+library(victim)
+library(foreign)
+# library(ggplot2)
+# library(Cairo)
+# library(knitr)
+# library(texreg)
+# library(lme4)
+# library(glmmADMB)
+# library(classInt)
+# library(dplyr)
+# library(reshape2)
+# library(lmtest)
+# library(car)
+# library(pscl)
+sessionInfo()
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      comment="",
+                      cache=TRUE,
+                      dev=c("png", "CairoPDF"),
+                      error=TRUE,
+                      fig.width=5, fig.height=4)
+options(knitr.kable.NA = '--')
+```
+
+
+## Data input  
+
+### ENVE 2014
+
+```{r 2014-import-data}
+enve_all_2014 <- read.dbf("enve2014cuest_ciega_2014.dbf")
+cat_entidades <- read.csv("cat_entidades.csv", head=TRUE) 
+#area_level_tmp <- read.csv("state_level_data.csv", header=TRUE) # Merge other year data
+#area_level <- merge(area_level_tmp, cat_entidades, by="CVE_ENT", all.x=TRUE)
+scode <- read.csv("secode.csv", head=TRUE)
+scode$Code <- scode$Code*10000
+```
+
+
+Quick overview of all the variables in the 2014 dataset
+
+```{r 2014-overview-all}
+
+summary(enve_all_2014)
+
+```
+
+Now select only the relevant variables
+
+```{r extortion-variables-selection}
+
+select_variables <- function(df, year = c("2014", "2016", "2012"), 
+                            type = c("main", "victim forms"))
+{
+    # A useful function
+    fac_to_num <- function(x)
+    {
+        y <- as.integer(as.character(x))
+        
+        return(y)
+    }
+    
+    # List of variables
+    vars <- list(extortions = "P26_10",
+                 extortion_victim = "P25_10",
+                 respondent_id = "ID_CONSECU",
+                 bribes = "P33",
+                 )
+    
+    
+    
+    
+
+    if(year[1] == "2012")
+    {
+        vars$extortions <- "P26_9"
+        # also bribes is different
+    }
+    
+    if(type[1] == "main")
+        {
+            df <- data.frame(extortions = fac_to_num(x$P26_10))
+        }
+    
+
+}
+
+
+
+enve_test_2014 <- data.frame(extortions=as.integer(as.character(enve_all$P26_10)))
+
+enve_test_2014$extortion_victim <- enve_all$P25_10
+enve_test_2014$extortions[enve_test_2014$extortion_victim == 2] <- 0
+
+summary(enve_test_2014$extortions)
+table(enve_test_2014$extortions)
+
+enve_test_2014$extortions_nas <- enve_test_2014$extortions
+enve_test_2014$extortions[is.na(enve_test_2014$extortions)] <- 0
+
+summary(enve_test_2014$extortions)
+table(enve_test_2014$extortions)
+
+levels(enve_test_2014$extortion_victim) <- c("yes", "no", "dk")
+enve_test_2014$extortion_victim <- relevel(enve_test_2014$extortion_victim, ref = "no")
+
+enve_test_2014$rep_extortion_victim <- factor(enve_test_2014$extortions)
+levels(enve_test_2014$rep_extortion_victim) <- c(0, 0,
+                    rep(1, length(levels(enve_test_2014$rep_extortion_victim)) - 2))
+
+### Turn this into a function
+
+### select
+
+summary(enve_test_2014$rep_extortion_victim)
+
+
+summary(enve_test_2014)
+
+
+
+
+
+```
+
+
+
+Perhaps it might be a good idea to import and pre process data using a set of functions?
+
+### ENVE 2012
+
+### ENVE 2016
+
+
+
+
+
+
