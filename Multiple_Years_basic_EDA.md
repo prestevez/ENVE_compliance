@@ -22,7 +22,7 @@ date()
 ```
 
 ```
-## [1] "Wed Oct 18 15:51:53 2017"
+## [1] "Wed Oct 18 16:00:27 2017"
 ```
 
 ```r
@@ -48,9 +48,13 @@ sessionInfo()
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
+## other attached packages:
+## [1] foreign_0.8-67
+## 
 ## loaded via a namespace (and not attached):
-## [1] compiler_3.4.0 magrittr_1.5   tools_3.4.0    stringi_1.1.5 
-## [5] knitr_1.16     stringr_1.2.0  evaluate_0.10
+## [1] compiler_3.4.0   magrittr_1.5     tools_3.4.0      codetools_0.2-15
+## [5] stringi_1.1.5    knitr_1.16       digest_0.6.12    stringr_1.2.0   
+## [9] evaluate_0.10
 ```
 
 ```r
@@ -111,8 +115,9 @@ sessionInfo()
 ## [1] foreign_0.8-67
 ## 
 ## loaded via a namespace (and not attached):
-## [1] compiler_3.4.0 magrittr_1.5   tools_3.4.0    stringi_1.1.5 
-## [5] knitr_1.16     stringr_1.2.0  evaluate_0.10
+## [1] compiler_3.4.0   magrittr_1.5     tools_3.4.0      codetools_0.2-15
+## [5] stringi_1.1.5    knitr_1.16       digest_0.6.12    stringr_1.2.0   
+## [9] evaluate_0.10
 ```
 
 
@@ -298,7 +303,7 @@ summary(enve_delitos_2014)
 
 ```r
 enve_2016 <- read.dbf("enve2016cuest_ciega_2016.dbf")
-summary(enve_2014)
+summary(enve_2016)
 ```
 
 ```
@@ -330,7 +335,7 @@ summary(enve_2014)
 
 ```r
 enve_delitos_2016 <- read.dbf("enve2016delitos_ciega_2016.dbf")
-summary(enve_delitos_2014)
+summary(enve_delitos_2016)
 ```
 
 ```

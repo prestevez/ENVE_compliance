@@ -93,10 +93,10 @@ enve_delitos_2014 <- read.dbf("enve2014delitos_ciega_2014.dbf")
 summary(enve_delitos_2014)
 
 enve_2016 <- read.dbf("enve2016cuest_ciega_2016.dbf")
-summary(enve_2014)
+summary(enve_2016)
 
 enve_delitos_2016 <- read.dbf("enve2016delitos_ciega_2016.dbf")
-summary(enve_delitos_2014)
+summary(enve_delitos_2016)
 
 ```
 
