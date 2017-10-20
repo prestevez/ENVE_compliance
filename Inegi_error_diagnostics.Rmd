@@ -63,7 +63,7 @@ options(knitr.kable.NA = '--')
 
 # Other diagnostics
 
-```
+```{r file-system-info}
 getwd()
 list.files()
 ```

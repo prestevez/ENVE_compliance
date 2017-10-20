@@ -8,11 +8,11 @@ output:
     variant: "markdown"
 pandoc_args: "--smart"
 ---
-    
+
 # Set up, data input and pre-process
-    
+
 ## Session info
-    
+
 We first check details of the session and system, and for reproducibility, we set the random seed.
 
 
@@ -22,7 +22,7 @@ date()
 ```
 
 ```
-## [1] "Wed Oct 18 16:00:27 2017"
+## [1] "Fri Oct 20 16:47:25 2017"
 ```
 
 ```r
@@ -75,7 +75,7 @@ Next we load the packages that we will use.
 
 
 ```r
-#library(victim)
+# library(victim)
 library(foreign)
 # library(ggplot2)
 # library(Cairo)
@@ -120,6 +120,29 @@ sessionInfo()
 ## [9] evaluate_0.10
 ```
 
+```r
+getwd()
+```
+
+```
+## [1] "/nfs/cfs/home2/uctz/uctzpre/projects/ENVE_compliance"
+```
+
+```r
+list.files()
+```
+
+```
+##  [1] "cache"                            "enve2012cuest_ciega_2012.dbf"    
+##  [3] "enve2012delitos_ciega_2012.dbf"   "enve2014cuest_ciega_2014.dbf"    
+##  [5] "enve2014delitos_ciega_2014.dbf"   "enve2016cuest_ciega_2016.dbf"    
+##  [7] "enve2016delitos_ciega_2016.dbf"   "Inegi_error_diagnostics.md"      
+##  [9] "Inegi_error_diagnostics.Rmd"      "Multiple_Years_basic_EDA.html"   
+## [11] "Multiple_Years_basic_EDA.md"      "Multiple_Years_basic_EDA.Rmd"    
+## [13] "Multiple_Years_basic_WINDOWS.Rmd" "README.md"                       
+## [15] "testdata"
+```
+
 
 
 
@@ -137,8 +160,8 @@ Se asume que los nombres de las tablas de datos son los siguientes:
 - Enve 2016
     - Principal: `enve2016cuest_ciega_2016.dbf`
     - Delitos: `enve2016delitos_ciega_2016.dbf`
-        
-Si fueran diferentes se ruega se adapten los nombres en el bloque de código a continuación.
+
+Si fueran diferentes se ruega se adapten los nombres en el bloque de codigo a continuacion.
 
 
 ```r
