@@ -1,8 +1,8 @@
 ---
-title: "Extortion in Mexico: Basic EDA of several sweeps of the ENVE"
+title: "Error diagnostics: ENVE Multi-year analysis"
 author: "Patricio R. Estevez Soto"
 email: "patricio.estevez.14@ucl.ac.uk"
-date: "21/09/2017"
+date: "20/10/2017"
 output:
     md_document:
     variant: "markdown"
@@ -49,8 +49,6 @@ library(foreign)
 # library(car)
 # library(pscl)
 sessionInfo()
-getwd()
-list.files()
 ```
 
 ```{r setup, include=FALSE}
@@ -63,43 +61,11 @@ knitr::opts_chunk$set(echo = TRUE,
 options(knitr.kable.NA = '--')
 ```
 
+# Other diagnostics
 
-## Data description  
-
-Se asume que los nombres de las tablas de datos son los siguientes:
-
-
-- Enve 2012
-    - Principal: `enve2012cuest_ciega_2012.dbf`
-    - Delitos: `enve2012delitos_ciega_2012.dbf`
-- Enve 2014
-    - Principal: `enve2014cuest_ciega_2014.dbf`
-    - Delitos: `enve2014delitos_ciega_2014.dbf`
-- Enve 2016
-    - Principal: `enve2016cuest_ciega_2016.dbf`
-    - Delitos: `enve2016delitos_ciega_2016.dbf`
-
-Si fueran diferentes se ruega se adapten los nombres en el bloque de codigo a continuacion.
-
-```{r 2014-import-data}
-enve_2012 <- read.dbf("enve2012cuest_ciega_2012.dbf")
-summary(enve_2012)
-
-enve_delitos_2012 <- read.dbf("enve2012delitos_ciega_2012.dbf")
-summary(enve_delitos_2012)
-
-enve_2014 <- read.dbf("enve2014cuest_ciega_2014.dbf")
-summary(enve_2014)
-
-enve_delitos_2014 <- read.dbf("enve2014delitos_ciega_2014.dbf")
-summary(enve_delitos_2014)
-
-enve_2016 <- read.dbf("enve2016cuest_ciega_2016.dbf")
-summary(enve_2016)
-
-enve_delitos_2016 <- read.dbf("enve2016delitos_ciega_2016.dbf")
-summary(enve_delitos_2016)
-
+```
+getwd()
+list.files()
 ```
 
 END

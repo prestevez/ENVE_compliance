@@ -33,21 +33,20 @@ Install custom package, requires `devtools`.
 
 Next we load the packages that we will use.
 
-```{r packages}
-# library(victim)
-library(foreign)
-# library(ggplot2)
-# library(Cairo)
-# library(knitr)
-# library(texreg)
-# library(lme4)
-# library(glmmADMB)
-# library(classInt)
-# library(dplyr)
-# library(reshape2)
-# library(lmtest)
-# library(car)
-# library(pscl)
+```{r rodbc}
+
+# check package
+
+check.packages <- function(pkg){
+    new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+    if (length(new.pkg))
+        install.packages(new.pkg, dependencies = TRUE,
+        repos = "https://cloud.r-project.org")
+    sapply(pkg, require, character.only = TRUE)
+}
+
+check.packages("RODBC")
+
 sessionInfo()
 getwd()
 list.files()
@@ -64,7 +63,7 @@ options(knitr.kable.NA = '--')
 ```
 
 
-## Data description  
+## Data description
 
 Se asume que los nombres de las tablas de datos son los siguientes:
 
@@ -82,22 +81,22 @@ Se asume que los nombres de las tablas de datos son los siguientes:
 Si fueran diferentes se ruega se adapten los nombres en el bloque de codigo a continuacion.
 
 ```{r 2014-import-data}
-enve_2012 <- read.dbf("enve2012cuest_ciega_2012.dbf")
+enve_2012 <- odbcConnectDbase("enve2012cuest_ciega_2012.dbf")
 summary(enve_2012)
 
-enve_delitos_2012 <- read.dbf("enve2012delitos_ciega_2012.dbf")
+enve_delitos_2012 <- odbcConnectDbase("enve2012delitos_ciega_2012.dbf")
 summary(enve_delitos_2012)
 
-enve_2014 <- read.dbf("enve2014cuest_ciega_2014.dbf")
+enve_2014 <- odbcConnectDbase("enve2014cuest_ciega_2014.dbf")
 summary(enve_2014)
 
-enve_delitos_2014 <- read.dbf("enve2014delitos_ciega_2014.dbf")
+enve_delitos_2014 <- odbcConnectDbase("enve2014delitos_ciega_2014.dbf")
 summary(enve_delitos_2014)
 
-enve_2016 <- read.dbf("enve2016cuest_ciega_2016.dbf")
+enve_2016 <- odbcConnectDbase("enve2016cuest_ciega_2016.dbf")
 summary(enve_2016)
 
-enve_delitos_2016 <- read.dbf("enve2016delitos_ciega_2016.dbf")
+enve_delitos_2016 <- odbcConnectDbase("enve2016delitos_ciega_2016.dbf")
 summary(enve_delitos_2016)
 
 ```
