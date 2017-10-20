@@ -47,7 +47,7 @@ check.packages <- function(pkg){
 
 check.packages("devtools")
 
-install_version("foreign", version = ‘0.8.67’,
+install_version("foreign", version = "0.8-67",
     repos = "https://cloud.r-project.org")
 
 library(foreign)
