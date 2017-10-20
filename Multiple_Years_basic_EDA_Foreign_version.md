@@ -22,7 +22,7 @@ date()
 ```
 
 ```
-## [1] "Fri Oct 20 17:56:32 2017"
+## [1] "Fri Oct 20 18:03:28 2017"
 ```
 
 ```r
@@ -30,23 +30,27 @@ sessionInfo()
 ```
 
 ```
-## R version 3.3.1 (2016-06-21)
-## Platform: x86_64-apple-darwin13.4.0 (64-bit)
-## Running under: OS X 10.12.6 (Sierra)
+## R version 3.4.0 (2017-04-21)
+## Platform: x86_64-pc-linux-gnu (64-bit)
+## Running under: Red Hat Enterprise Linux Server 7.2 (Maipo)
+## 
+## Matrix products: default
+## BLAS/LAPACK: /shared/ucl/apps/openblas/0.2.14/gnu-4.9.2/lib/libopenblasp-r0.2.14.so
 ## 
 ## locale:
-## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+##  [1] LC_CTYPE=en_GB.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_GB.UTF-8        LC_COLLATE=en_GB.UTF-8    
+##  [5] LC_MONETARY=en_GB.UTF-8    LC_MESSAGES=en_GB.UTF-8   
+##  [7] LC_PAPER=en_GB.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_GB.UTF-8 LC_IDENTIFICATION=C       
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
-## other attached packages:
-## [1] foreign_0.8-67  devtools_1.12.0
-## 
 ## loaded via a namespace (and not attached):
-##  [1] magrittr_1.5     tools_3.3.1      withr_1.0.2      memoise_1.0.0   
-##  [5] codetools_0.2-15 stringi_1.1.5    knitr_1.16       digest_0.6.12   
-##  [9] stringr_1.2.0    evaluate_0.10
+## [1] compiler_3.4.0 magrittr_1.5   tools_3.4.0    stringi_1.1.5 
+## [5] knitr_1.16     stringr_1.2.0  evaluate_0.10
 ```
 
 ```r
@@ -81,6 +85,10 @@ check.packages("devtools")
 ```
 
 ```
+## Loading required package: devtools
+```
+
+```
 ## devtools 
 ##     TRUE
 ```
@@ -99,18 +107,15 @@ install_version("foreign", version = "0.8-67",
 ```
 
 ```
-## '/Library/Frameworks/R.framework/Resources/bin/R' --no-site-file  \
+## '/shared/ucl/apps/R/R-3.4.0-OpenBLAS/lib64/R/bin/R' --no-site-file  \
 ##   --no-environ --no-save --no-restore --quiet CMD INSTALL  \
-##   '/private/var/folders/zs/b92vw00n1ll1r4c_8kvrpn9w0000gn/T/RtmpFisQgj/devtoolsd9f14ba79529/foreign'  \
-##   --library='/Users/prestevez/Library/R/3.3/library' --install-tests
+##   '/tmp/RtmpDD91FH/devtoolscb195f334192/foreign'  \
+##   --library='/nfs/cfs/home2/uctz/uctzpre/R/x86_64-pc-linux-gnu-library/3.4'  \
+##   --install-tests
 ```
 
 ```
 ## 
-```
-
-```
-## Reloading installed foreign
 ```
 
 ```r
@@ -120,23 +125,31 @@ sessionInfo()
 ```
 
 ```
-## R version 3.3.1 (2016-06-21)
-## Platform: x86_64-apple-darwin13.4.0 (64-bit)
-## Running under: OS X 10.12.6 (Sierra)
+## R version 3.4.0 (2017-04-21)
+## Platform: x86_64-pc-linux-gnu (64-bit)
+## Running under: Red Hat Enterprise Linux Server 7.2 (Maipo)
+## 
+## Matrix products: default
+## BLAS/LAPACK: /shared/ucl/apps/openblas/0.2.14/gnu-4.9.2/lib/libopenblasp-r0.2.14.so
 ## 
 ## locale:
-## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+##  [1] LC_CTYPE=en_GB.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_GB.UTF-8        LC_COLLATE=en_GB.UTF-8    
+##  [5] LC_MONETARY=en_GB.UTF-8    LC_MESSAGES=en_GB.UTF-8   
+##  [7] LC_PAPER=en_GB.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_GB.UTF-8 LC_IDENTIFICATION=C       
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-## [1] foreign_0.8-67  devtools_1.12.0
+## [1] foreign_0.8-67  devtools_1.13.1
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] httr_1.2.1       R6_2.2.2         magrittr_1.5     tools_3.3.1     
-##  [5] withr_1.0.2      curl_2.3         memoise_1.0.0    codetools_0.2-15
-##  [9] stringi_1.1.5    knitr_1.16       digest_0.6.12    stringr_1.2.0   
+##  [1] httr_1.2.1     compiler_3.4.0 R6_2.2.1       magrittr_1.5  
+##  [5] tools_3.4.0    withr_1.0.2    curl_2.6       memoise_1.1.0 
+##  [9] stringi_1.1.5  knitr_1.16     digest_0.6.12  stringr_1.2.0 
 ## [13] evaluate_0.10
 ```
 
@@ -145,7 +158,7 @@ getwd()
 ```
 
 ```
-## [1] "/Users/prestevez/R/ENVE_compliance"
+## [1] "/nfs/cfs/home2/uctz/uctzpre/projects/ENVE_compliance"
 ```
 
 ```r
@@ -154,22 +167,21 @@ list.files()
 
 ```
 ##  [1] "cache"                                       
-##  [2] "ENVE_compliance.Rproj"                       
-##  [3] "enve2012cuest_ciega_2012.dbf"                
-##  [4] "enve2012delitos_ciega_2012.dbf"              
-##  [5] "enve2014cuest_ciega_2014.dbf"                
-##  [6] "enve2014delitos_ciega_2014.dbf"              
-##  [7] "enve2016cuest_ciega_2016.dbf"                
-##  [8] "enve2016delitos_ciega_2016.dbf"              
-##  [9] "Inegi_error_diagnostics.md"                  
-## [10] "Inegi_error_diagnostics.Rmd"                 
-## [11] "Multiple_Years_basic_EDA_Foreign_version.md" 
-## [12] "Multiple_Years_basic_EDA_Foreign_version.Rmd"
-## [13] "Multiple_Years_basic_EDA.html"               
-## [14] "Multiple_Years_basic_EDA.md"                 
-## [15] "Multiple_Years_basic_EDA.Rmd"                
-## [16] "README.md"                                   
-## [17] "testdata"
+##  [2] "enve2012cuest_ciega_2012.dbf"                
+##  [3] "enve2012delitos_ciega_2012.dbf"              
+##  [4] "enve2014cuest_ciega_2014.dbf"                
+##  [5] "enve2014delitos_ciega_2014.dbf"              
+##  [6] "enve2016cuest_ciega_2016.dbf"                
+##  [7] "enve2016delitos_ciega_2016.dbf"              
+##  [8] "Inegi_error_diagnostics.md"                  
+##  [9] "Inegi_error_diagnostics.Rmd"                 
+## [10] "Multiple_Years_basic_EDA_Foreign_version.md" 
+## [11] "Multiple_Years_basic_EDA_Foreign_version.Rmd"
+## [12] "Multiple_Years_basic_EDA.html"               
+## [13] "Multiple_Years_basic_EDA.md"                 
+## [14] "Multiple_Years_basic_EDA.Rmd"                
+## [15] "README.md"                                   
+## [16] "testdata"
 ```
 
 
